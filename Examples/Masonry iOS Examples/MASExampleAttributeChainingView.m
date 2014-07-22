@@ -38,7 +38,7 @@
 
     [view1 mas_makeConstraints:^(MASConstraintMaker *make) {
         // chain attributes
-        make.top.and.left.greaterThanOrEqualTo(superview).insets(padding);
+        make.top.and_.left.greaterThanOrEqualTo(superview).insets(padding);
 
         // which is the equivalent of
 //        make.top.greaterThanOrEqualTo(superview).insets(padding);
@@ -53,7 +53,7 @@
 
     [view2 mas_makeConstraints:^(MASConstraintMaker *make) {
         // chain attributes
-        make.top.and.right.equalTo(superview).insets(padding);
+        make.top.and_.right.equalTo(superview).insets(padding);
 
         make.left.equalTo(view1.mas_right).insets(padding);
         make.bottom.equalTo(view3.mas_top).insets(padding);
@@ -66,7 +66,7 @@
         make.top.equalTo(view1.mas_bottom).insets(padding);
 
         // chain attributes
-        make.left.right.and.bottom.equalTo(superview).insets(padding);
+        make.left.right.and_.bottom.equalTo(superview).insets(padding);
 
         make.height.equalTo(@[view1, view2]);
     }];
